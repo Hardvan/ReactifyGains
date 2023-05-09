@@ -30,10 +30,6 @@
   justify-content: flex-start;
 }
 
-.the-best-ad > span {
-  z-index: 2;
-}
-
 .the-best-ad > div {
   position: absolute;
   background-color: var(--orange);
@@ -42,4 +38,19 @@
   left: 8px;
   border-radius: 3rem;
   z-index: 1;
+}
+
+.the-best-ad > span {
+  z-index: 2;
+}
+
+.hero-text {
+  display: flex;
+  flex-flow: column;
+  gap: 1.5rem;
+  text-transform: uppercase;
+  font-size: 4.5rem;
+  font-weight: bold;
+  color: white;
+  text-overflow: inherit;
 }
