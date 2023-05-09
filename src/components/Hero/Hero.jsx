@@ -25,6 +25,26 @@ const Hero = () => {
           <div className="">
             <span>Ideal Body</span>
           </div>
+          <div className="span">
+            In here we will help you to shape and build your ideal body and live
+            up your life to the fullest
+          </div>
+        </div>
+
+        {/* Figures */}
+        <div className="figures">
+          <div>
+            <span>+140</span>
+            <span>Expert Coaches</span>
+          </div>
+          <div>
+            <span>+978</span>
+            <span>Members Joined</span>
+          </div>
+          <div>
+            <span>+50</span>
+            <span>Fitness Programs</span>
+          </div>
         </div>
       </div>
       <div className="right-hero">Right Side</div>
