@@ -1,0 +1,9 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-hero {
+  padding: 2rem;
+  padding-top: 1.5rem;
+}
