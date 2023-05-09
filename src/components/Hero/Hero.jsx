@@ -9,6 +9,11 @@ const Hero = () => {
     <div className="hero">
       <div className="left-hero">
         <Header />
+
+        <div className="the-best-ad">
+          <div></div>
+          <span>The Best Fitness Club in Town</span>
+        </div>
       </div>
       <div className="right-hero">Right Side</div>
     </div>
