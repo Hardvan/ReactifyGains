@@ -3,6 +3,7 @@
 import React from "react";
 import "./Hero.css";
 import Header from "../Header/Header";
+import { Link } from "react-scroll"; // For Smooth Scrolling
 
 // Images
 import hero_image from "../../assets/hero_image.png";
@@ -77,14 +78,26 @@ const Hero = () => {
 
         {/* Hero Buttons */}
         <div className="hero-buttons">
-          <button className="btn">Get Started</button>
-          <button className="btn">Learn More</button>
+          <button className="btn">
+            <Link to="programs" spy={true} smooth={true}>
+              Get Started
+            </Link>
+          </button>
+          <button className="btn">
+            <Link to="reasons" spy={true} smooth={true}>
+              Learn More
+            </Link>
+          </button>
         </div>
       </div>
 
       {/* Right Side */}
       <div className="right-hero">
-        <button className="btn">Join Now</button>
+        <button className="btn">
+          <Link to="join-us" spy={true} smooth={true}>
+            Join Now
+          </Link>
+        </button>
 
         {/* Heart Rate */}
         <motion.div
