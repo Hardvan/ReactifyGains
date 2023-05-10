@@ -38,7 +38,7 @@ const Testimonials = () => {
   }
 
   return (
-    <div className="Testimonials">
+    <div className="Testimonials" id="testimonials">
       {/* Left Side */}
       <div className="left-testimonial">
         <span>Testimonials</span>
