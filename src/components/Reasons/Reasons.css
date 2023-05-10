@@ -114,4 +114,8 @@
     width: 7rem;
     height: 6rem;
   }
+
+  .partners {
+    justify-content: center;
+  }
 }

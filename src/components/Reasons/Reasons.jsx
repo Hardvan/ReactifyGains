@@ -51,6 +51,8 @@ const Reasons = () => {
           style={{
             color: "var(--gray)",
             fontWeight: "normal",
+            display: "flex",
+            justifyContent: "center",
           }}
         >
           Our Partners
