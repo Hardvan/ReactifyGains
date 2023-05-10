@@ -13,6 +13,9 @@ import Calories from "../../assets/calories.png";
 // For Animation
 import { motion } from "framer-motion";
 
+// For Number Counter
+import NumberCounter from "number-counter";
+
 const Hero = () => {
   const transition = { type: "spring", duration: 3 };
   const mobile = window.innerWidth <= 768;
@@ -53,15 +56,21 @@ const Hero = () => {
         {/* Figures */}
         <div className="figures">
           <div>
-            <span>+140</span>
+            <span>
+              <NumberCounter start={100} end={140} delay="4" preFix="+" />
+            </span>
             <span>Expert Coaches</span>
           </div>
           <div>
-            <span>+978</span>
+            <span>
+              <NumberCounter start={800} end={978} delay="4" preFix="+" />
+            </span>
             <span>Members Joined</span>
           </div>
           <div>
-            <span>+50</span>
+            <span>
+              <NumberCounter start={0} end={50} delay="4" preFix="+" />
+            </span>
             <span>Fitness Programs</span>
           </div>
         </div>
