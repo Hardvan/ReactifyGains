@@ -4,7 +4,7 @@ import "./Join.css";
 // EmailJS for sending emails
 import emailjs from "@emailjs/browser";
 
-import { SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY } from "../../../secrets";
+import { SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY } from "../../secrets";
 
 const Join = () => {
   // We are using the useRef hook to get the value of the input
