@@ -3,10 +3,13 @@ import "./Testimonials.css";
 import { testimonialsData } from "../../data/testimonialsData";
 import leftArrow from "../../assets/leftArrow.png";
 import rightArrow from "../../assets/rightArrow.png";
+import { motion } from "framer-motion";
 
 const Testimonials = () => {
   const [selected, setSelected] = useState(0);
   const t_length = testimonialsData.length;
+
+  const transition = { type: "spring", duration: 3 };
 
   // Function to handle left arrow click (Previous Testimonial)
   function handleLeftArrowClick() {
@@ -43,7 +46,15 @@ const Testimonials = () => {
         <span>say about us</span>
 
         {/* Review */}
-        <span>{testimonialsData[selected].review}</span>
+        <motion.span
+          key={selected}
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: 100 }}
+          transition={transition}
+        >
+          {testimonialsData[selected].review}
+        </motion.span>
         {/* Person's Name & Status */}
         <span>
           <span style={{ color: "var(--orange" }}>
@@ -55,9 +66,25 @@ const Testimonials = () => {
 
       {/* Right Side */}
       <div className="right-testimonial">
-        <div></div>
-        <div></div>
-        <img src={testimonialsData[selected].image} alt="" />
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ ...transition, duration: 2 }}
+        ></motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ ...transition, duration: 2 }}
+        ></motion.div>
+        <motion.img
+          src={testimonialsData[selected].image}
+          alt=""
+          key={selected}
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -100 }}
+          transition={transition}
+        />
 
         <div className="arrows">
           <img src={leftArrow} alt="" onClick={handleLeftArrowClick} />
