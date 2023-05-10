@@ -14,13 +14,54 @@ import tick from "../../assets/tick.png";
 const Reasons = () => {
   return (
     <div className="Reasons" id="reasons">
+      {/* Gym Images (Left Side) */}
       <div className="left-reason">
         <img src={image1} alt="" />
         <img src={image2} alt="" />
         <img src={image3} alt="" />
         <img src={image4} alt="" />
       </div>
-      <div className="right-reason">Right Side</div>
+      <div className="right-reason">
+        <span>Some Reasons</span>
+        <div>
+          <span className="stroke-text">Why </span>
+          <span>choose us?</span>
+        </div>
+
+        {/* Reasons to Choose Us (Right Side) */}
+        <div className="details-right">
+          <div>
+            <img src={tick} alt=""></img>
+            <span>Over 140+ Expert Coaches</span>
+          </div>
+          <div>
+            <img src={tick} alt="" />
+            <span>Train Smarter & Faster than Before</span>
+          </div>
+          <div>
+            <img src={tick} alt="" />
+            <span>Free Program for New Member</span>
+          </div>
+          <div>
+            <img src={tick} alt="" />
+            <span>Reliable Partners</span>
+          </div>
+        </div>
+        <span
+          style={{
+            color: "var(--gray)",
+            fontWeight: "normal",
+          }}
+        >
+          Our Partners
+        </span>
+
+        <div className="partners">
+          <img src={nb} alt="" />
+          <img src={adidas} alt="" />
+          <img src={nike} alt="" />
+        </div>
+      </div>
     </div>
   );
 };
