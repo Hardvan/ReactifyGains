@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./Join.css";
 
 // EmailJS for sending emails
@@ -9,6 +9,8 @@ import { SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY } from "../../secrets";
 const Join = () => {
   // We are using the useRef hook to get the value of the input
   const form = useRef();
+
+  const [isEmailSent, setIsEmailSent] = useState(false); // State to check if the email is sent or not
 
   // Function to send email
   const sendEmail = (e) => {
@@ -22,6 +24,8 @@ const Join = () => {
         console.log(error.text);
       }
     );
+
+    setIsEmailSent(true); // Sets the state to true
   };
 
   return (
@@ -50,6 +54,11 @@ const Join = () => {
           />
           <button className="btn btn-join">Join Now</button>
         </form>
+        {isEmailSent ? (
+          <div className="email-sent">
+            <span>Email Sent!</span>
+          </div>
+        ) : null}
       </div>
     </div>
   );
