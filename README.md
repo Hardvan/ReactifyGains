@@ -16,4 +16,10 @@ A responsify React.js website for a fictional fitness company. The website conta
 
 ## Deployment
 
-The website is deployed on Cloudflare Pages via first running `npm run build` on the local machine and then uploading the `build` folder to Cloudflare Pages.
+The website is deployed on Cloudflare Pages through the following steps:
+
+1. ```bash
+   npm run build
+   ```
+
+2. Upload the `build` folder generated in the previous step to `Cloudflare Pages`.
