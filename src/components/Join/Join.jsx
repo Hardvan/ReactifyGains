@@ -4,6 +4,8 @@ import "./Join.css";
 // EmailJS for sending emails
 import emailjs from "@emailjs/browser";
 
+import { SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY } from "../../../secrets";
+
 const Join = () => {
   // We are using the useRef hook to get the value of the input
   const form = useRef();
@@ -12,21 +14,14 @@ const Join = () => {
   const sendEmail = (e) => {
     e.preventDefault(); // Prevents the page from reloading
 
-    emailjs
-      .sendForm(
-        "service_u45lden",
-        "template_6k408va",
-        form.current,
-        "_Nm5wCNzPyOekq27a"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY).then(
+      (result) => {
+        console.log(result.text);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
   };
 
   return (
