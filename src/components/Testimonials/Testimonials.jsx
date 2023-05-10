@@ -7,7 +7,33 @@ import rightArrow from "../../assets/rightArrow.png";
 
 const Testimonials = () => {
   const [selected, setSelected] = useState(0);
-  const testimonial_length = testimonialsData.length;
+  const t_length = testimonialsData.length;
+
+  // Function to handle left arrow click (Previous Testimonial)
+  function handleLeftArrowClick() {
+    // Calculate new index
+    let new_index = 0;
+    if (selected === 0) {
+      new_index = t_length - 1;
+    } else {
+      new_index = selected - 1;
+    }
+
+    setSelected(new_index); // Set new index
+  }
+
+  // Function to handle right arrow click (Next Testimonial)
+  function handleRightArrowClick() {
+    // Calculate new index
+    let new_index = 0;
+    if (selected === t_length - 1) {
+      new_index = 0;
+    } else {
+      new_index = selected + 1;
+    }
+
+    setSelected(new_index); // Set new index
+  }
 
   return (
     <div className="Testimonials">
@@ -30,13 +56,13 @@ const Testimonials = () => {
 
       {/* Right Side */}
       <div className="right-testimonial">
-      <div></div>
-      <div></div>
+        <div></div>
+        <div></div>
         <img src={testimonialsData[selected].image} alt="" />
 
         <div className="arrows">
-          <img src={leftArrow} alt="" />
-          <img src={rightArrow} alt="" />
+          <img src={leftArrow} alt="" onClick={handleLeftArrowClick} />
+          <img src={rightArrow} alt="" onClick={handleRightArrowClick} />
         </div>
       </div>
     </div>
