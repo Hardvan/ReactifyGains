@@ -15,6 +15,10 @@ const Footer = () => {
           <img src={Instagram} alt="" />
           <img src={LinkedIn} alt="" />
         </div>
+        <p className="footer-text">
+          Made with <span className="heart">❤</span> by Hardvan &copy;{" "}
+          {new Date().getFullYear()}
+        </p>
         <div className="logo-footer">
           <img src={Logo} alt="" />
         </div>

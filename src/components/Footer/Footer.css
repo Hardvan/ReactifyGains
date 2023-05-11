@@ -27,6 +27,15 @@
   cursor: pointer;
 }
 
+.footer-text {
+  font-size: 1.2rem;
+  color: var(--lightgray);
+}
+
+.heart {
+  color: red;
+}
+
 .logo-footer > img {
   width: 10rem;
 }
